@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            margin: auto;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #3498db;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInImg 1.5s ease-in-out;
+        }
+
+        @keyframes fadeInImg {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .quote {
+            font-style: italic;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #e74c3c;
+            opacity: 0;
+            animation: fadeInQuote 1.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeInQuote {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        button {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            animation: fadeInButton 1.5s ease-in-out;
+        }
+
+        @keyframes fadeInButton {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <title>Motivation for Klara</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Dear Klara,</h1>
+        <p>You are strong, beautiful, and resilient. Here's a little motivation to brighten your day:</p>
+        <img src="tt.jpg" alt="Motivational Image">
+        <p class="quote" id="motivationalQuote">"YOU ARE SO STRONG YOU HAVE BEEN THROUGH ALOT AND YOU STILL FIGHTING AND YOU JUST ARE SO CLOSE FOR WINNING THIS BATTLE , KEEP FIGHTING SWEETIE"</p>
+        <p>Remember, you've got this!</p>
+        <p style="color: #d111ae;">Love,<br>Oliver</p>
+
+        <button onclick="revealSentence()">Click me,sweetie</button>
+        <p id="revealedSentence" class="hidden">Your presence in my life is making it better!</p>
+
+        <script>
+            function revealSentence() {
+                const revealedSentence = document.getElementById("revealedSentence");
+                revealedSentence.classList.remove("hidden");
+            }
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const motivationalImage = document.querySelector("#motivationalImage");
+                const motivationalQuote = document.querySelector("#motivationalQuote");
+
+                // Replace with your actual image URL
+                motivationalImage.src = "tt.jpg";
+
+                // Replace with your actual motivational quote
+                motivationalQuote.textContent = "Replace this with your motivational quote.";
+            });
+        </script>
+    </div>
+</body>
+</html>
